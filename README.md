@@ -13,3 +13,5 @@ This repo allows you to run VSCode as a local webserver.
   - `sudo systemctl enable code-server`
   - `sudo systemctl start code-server`
   - `sudo systemctl status code-server`
+- The vscode server should be accessible at the following url:
+  - http://localhost:8000/
