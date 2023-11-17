@@ -1,41 +1,15 @@
-# code-server
+# vscode-webserver
 
-This repo allows you to run a local VSCode server.
-
-It consists of a standalone binary that can be run as a service.
-
-When configured correctly, it should initiate a download of the latest version of VSCode.
+This repo allows you to run VSCode as a local webserver.
 
 ## Usage
 
-- Place the, `code-server-standalone` binary in the following location: `/usr/local/bin/`.
-- Make the binary executable: `sudo chmod a+x /usr/local/bin/code-server-standalone`
-- Test running a local VSCode Server:
-  - `code-server-standalone --disable-telemetry --accept-server-license-terms serve-local --host 0.0.0.0 --without-connection-token`
-- To run this as a service:
-
-```bash
-nano /etc/systemd/system/code-server.service
-```
-
-```
-[Unit]
-Description=Code Server Service
-
-[Service]
-ExecStart=/usr/local/bin/code-server-standalone --disable-telemetry --accept-server-license-terms --server-data-dir <optional-parameter> serve-local --host 0.0.0.0 --without-connection-token
-User=user
-Restart=always
-LimitNOFILE=20480
-
-[Install]
-WantedBy=multi-user.target
-```
-Then enable and start the service:
-```
-sudo systemctl daemon-reload
-sudo systemctl enable code-server
-sudo systemctl start code-server
-sudo systemctl status code-server
-```
-Ensure that the User directive is correctly set. The user should have appropriate permissions for the specified paths and executables.
+- Place the `code-server` binary file in the following location: `/usr/local/bin/`.
+- Place the `code-server.service` file in the following location: `/etc/systemd/system/`.
+  - You may need to edit the `code-server.service` according to your specific environment.
+    - This may include changing the User directive value and/or adding additional parameters to ExecStart.
+- Enable and start the service:
+  - `sudo systemctl daemon-reload`
+  - `sudo systemctl enable code-server`
+  - `sudo systemctl start code-server`
+  - `sudo systemctl status code-server`
