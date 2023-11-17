@@ -2,8 +2,8 @@
 Description=Code Server Service
 
 [Service]
-ExecStart=/usr/local/bin/code-server-standalone --disable-telemetry --accept-server-license-terms --server-data-dir <optional-parameter> serve-local --host 0.0.0.0 --without-connection-token
-User=user
+ExecStart=/usr/local/bin/code-server --disable-telemetry --accept-server-license-terms serve-local --host 0.0.0.0 --without-connection-token
+User=anthony
 Restart=always
 LimitNOFILE=20480
 
