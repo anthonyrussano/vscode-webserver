@@ -4,7 +4,9 @@ Description=Code Server Service
 [Service]
 ExecStart=/usr/local/bin/code-server --disable-telemetry --accept-server-license-terms serve-local --host 0.0.0.0 --without-connection-token
 User=anthony
-Restart=always
+[Service]
+Restart=on-failure
+RestartSec=30s  # Waits 30 seconds before attempting to restart
 LimitNOFILE=20480
 
 [Install]
