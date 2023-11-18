@@ -1,6 +1,6 @@
 # vscode-webserver
 
-![image](https://photos.app.goo.gl/NfPGEZyXzs67hsmZA)
+![image](https://res.cloudinary.com/alchemist-cookbook/image/upload/v1700289344/file-9eJyWsZneV8bokTxhuemRoCM_1.jpg)
 
 This repo allows you to run VSCode as a local webserver.
 
