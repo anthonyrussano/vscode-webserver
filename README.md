@@ -1,7 +1,5 @@
 # vscode-webserver
 
-![image](https://res.cloudinary.com/alchemist-cookbook/image/upload/v1700289344/file-9eJyWsZneV8bokTxhuemRoCM_1.jpg)
-
 This repo allows you to run VSCode as a local webserver.
 
 ## Usage
@@ -25,3 +23,17 @@ For Linux environments:
 This binary should also work on windows... Just open up powershell and type the following command:
 
 - `code-server --disable-telemetry --accept-server-license-terms serve-local --host 0.0.0.0 --without-connection-token`
+
+## References
+
+I obtained the `code-server` binary from the following setup script provided by Microsoft:
+
+- https://vscodeserverlauncher.blob.core.windows.net/builds/setup-scripts/setup.sh
+
+Part of the script downloads the binary from the following location:
+
+- `INSTALL_URL=https://aka.ms/vscode-server-launcher/$INSTALL_ARCH-$INSTALL_TARGET`
+
+The original article that referenced this setup script can be found here:
+
+- https://code.visualstudio.com/blogs/2022/07/07/vscode-server
