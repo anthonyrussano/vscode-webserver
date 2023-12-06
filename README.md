@@ -23,7 +23,8 @@ For Linux environments:
 This binary should also work on windows... Just open up powershell and type the following command:
 
 - `code-server --disable-telemetry --accept-server-license-terms serve-local --host 0.0.0.0 --without-connection-token`
-
+- `code-server serve-local --accept-server-license-terms --telemetry-level off --host 0.0.0.0`
+  
 ## References
 
 I obtained the `code-server` binary from the following setup script provided by Microsoft:
